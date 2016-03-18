@@ -10,11 +10,17 @@ public class Blackjack {
 
     Scanner userInput = new Scanner(System.in);
 
+    System.out.println("How many players?");
+    int numPlayers = userInput.nextInt();
+
+    ArrayList<Deck> hands
+
     // create hands for player and dealer, where hand is a Deck
     Deck playerHand = new Deck();
     Deck dealerHand = new Deck();
 
-    double playerMoney = 500.00; // don't really care about minor rounding errors so use double
+    int playerMoney = 500.00; // don't really care about minor rounding errors so use double
+
     
 
     // Game loop
