@@ -21,6 +21,24 @@ public class Deck {
     Collections.shuffle(this.cards);
   }
 
+  public void addCard(Card cardToAdd) {
+    this.cards.add(cardToAdd);
+  }
+
+  public void removeCard(int i) {
+    this.cards.remove(i);
+  }
+
+  public Card getCard(int i) {
+    return this.cards.get(i);
+  }
+
+  public void draw(Deck drawingFrom) {
+    this.cards.add(drawingFrom.getCard(0));
+    drawingFrom.removeCard(0);
+  }
+
+
   public String toString() {
     String cardListString = "";
     for (Card card: this.cards) {
